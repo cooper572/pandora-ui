@@ -8,8 +8,9 @@
         "start": "cross-env NODE_ENV=production node build/server/index.js",
         "build": "npm run build:server && npm run build:client",
         "build:client": "vite build",
+        "deploy": "npm run build && npx wrangler pages deploy build/client/client --project-name pandora-movies",
         "format": "prettier --write .",
-        "build:server": "tsc",
+        "build:server": "npm exec -- tsc",
         "test": "tsx --test"
     },
     "dependencies": {
