@@ -151,7 +151,11 @@ export const MediaEpisodes: React.FC<MediaEpisodesProps> = ({ tvId, seasons }) =
                 <div className="h-100 overflow-y-auto pr-4">
                     <div className="space-y-4">
                         {orderedEpisodes.map((episode) => (
-                            <div key={episode.id} className="flex gap-4 border-b border-border pb-4 last:border-0">
+                            <div
+                                key={episode.id}
+                                className="flex cursor-pointer gap-4 border-b border-border pb-4 last:border-0"
+                                onClick={() => handleEpisodeSelect(episode)}
+                            >
                                 <div className="relative h-20 w-32 shrink-0 overflow-hidden rounded bg-muted">
                                     {episode.stillUrl ? (
                                         <img src={episode.stillUrl} alt={episode.name} className="h-full w-full object-cover" />
