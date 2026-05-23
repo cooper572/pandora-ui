@@ -1,3 +1,6 @@
 name = "pandora-movies"
 pages_build_output_dir = "build/client/client"
 compatibility_date = "2026-05-12"
+
+[assets]
+directory = "build/client/client"
