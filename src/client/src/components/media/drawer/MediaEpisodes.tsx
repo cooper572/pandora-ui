@@ -148,7 +148,7 @@ export const MediaEpisodes: React.FC<MediaEpisodesProps> = ({ tvId, seasons }) =
                     </CarouselContent>
                 </Carousel>
             ) : (
-                <div className="h-100 overflow-x-scroll pr-4">
+                <div className="h-100 overflow-y-auto pr-4">
                     <div className="space-y-4">
                         {orderedEpisodes.map((episode) => (
                             <div key={episode.id} className="flex gap-4 border-b border-border pb-4 last:border-0">
